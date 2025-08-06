@@ -16,6 +16,7 @@ from app.rag_backend import ( clear_chat_history_from_db, extract_text_from_file
 import speech_recognition as sr
 import pvporcupine
 import pyaudio 
+from dotenv import load_dotenv
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 init_database()
 
@@ -134,6 +135,7 @@ class SidePanelApp(QMainWindow):
         self.active_workers = []
         self.start_wake_word_listener()
         self.check_onboarding()
+        load_dotenv()
 
     # In desktop_app.py, inside the SidePanelApp class
 
@@ -690,7 +692,7 @@ class SidePanelApp(QMainWindow):
 
     def start_wake_word_listener(self):
         # --- IMPORTANT: Paste your Picovoice AccessKey here ---
-        access_key = "LytMUWv/ejGz831olaC9xaJiyB2m27msGUYlkSFo/ZDgMRHnp/zwFw==" 
+        access_key = os.environ.get("PICOVOICE_ACCESS_KEY")
         
         self.wake_word_thread = QThread()
         self.wake_word_worker = WakeWordListener(access_key)

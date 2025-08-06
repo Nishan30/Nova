@@ -62,7 +62,8 @@ logs/
 *.njsproj
 *.sln
 *.swp
-
+.env
+*.env
 
 # ===================================================================
 # PySide / Qt Specific Files
