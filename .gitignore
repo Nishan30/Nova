@@ -1,0 +1,96 @@
+# ===================================================================
+# Python / Virtual Environment
+# ===================================================================
+# The entire virtual environment folder
+venv/
+/venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# ===================================================================
+# Local Databases & AI Model Caches
+#
+# CRITICAL: Do not commit your personal memories or large models!
+# ===================================================================
+# The main SQLite database containing all personal data
+memory.db
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# The ChromaDB vectorstore directory
+db/
+/db/
+
+# The folder for user-uploaded documents for RAG
+docs/
+/docs/
+
+# Ollama models are stored elsewhere, but if you download any manually:
+*.gguf
+*.bin
+
+# Whisper model cache (often in user home directory, but good to have)
+.cache/
+/.cache/
+
+
+# ===================================================================
+# Temporary & Generated Files
+# ===================================================================
+# Temporary audio files created during recording/transcription
+temp_*.wav
+
+# Any log files
+*.log
+logs/
+
+
+# ===================================================================
+# IDE & Editor Specific Files
+# ===================================================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+
+# ===================================================================
+# PySide / Qt Specific Files
+# ===================================================================
+# Compiled UI files (if you were using .ui files)
+*.ui.py
+
+
+# ===================================================================
+# Operating System Files
+# ===================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+
+# ===================================================================
+# Custom Project Folders (if any)
+# ===================================================================
+# Example: If you have a folder for video demo assets
+/video_assets/
